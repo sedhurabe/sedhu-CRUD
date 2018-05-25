@@ -1,0 +1,15 @@
+
+*{ box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+h1{ margin-bottom:20px; margin-top:0 }
+.App{ overflow: hidden; padding-top:100px; }
+.left{ width: 50%; float: left; padding:0 20px}
+
+input, textarea{ width: 100%; border:1px solid #00adff; padding:15px; margin-bottom:20px;}
+input{ height:50px; }
+textarea{ height:100px; resize: none; }
+button{ border:1px solid #00adff; min-width:200px; padding:15px; height:50px; text-transform: uppercase; background-color:#00adff; color:#fff; letter-spacing: 1px; }
