@@ -6,7 +6,8 @@ class PostForm extends Component {
 	  super(props);
 	  this.state = {
 	  	title:"",
-	  	message:""
+	  	message:"",
+	  	qty:''
 	  };
 	  this.handleChange = this.handleChange.bind(this);
 	  this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,11 +20,13 @@ class PostForm extends Component {
 
 	handleSubmit(e){
 		e.preventDefault();
-		const { title , message } = this.state;
+		const { title , message, qty } = this.state;
 		const data = {
 			id: new Date(),
 			title: title,
-			message: message
+			message: message,
+			qty:qty,
+			editing:false
 		}
 
 		this.props.dispatch({
@@ -32,7 +35,8 @@ class PostForm extends Component {
 	  	});
 	    this.setState({
 			title:'',
-			message:''
+			message:'',
+			qty:''
 		})
 	}
 
@@ -42,6 +46,7 @@ class PostForm extends Component {
 				<h1>Creat List</h1>
 				<form className="formRow" onSubmit={this.handleSubmit}>
 					<input type="text" name="title" value={this.state.title} placeholder="Enter Title" onChange={this.handleChange} />
+					<input type="number" name="qty" value={this.state.qty} placeholder="Enter Unit" onChange={this.handleChange} />
 					<textarea name="message" value={this.state.message} placeholder="Enter Post" onChange={this.handleChange}></textarea>
 					<button>Submit</button>
 				</form>

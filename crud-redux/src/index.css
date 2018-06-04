@@ -7,9 +7,15 @@ body {
 }
 h1{ margin-bottom:20px; margin-top:0 }
 .App{ overflow: hidden; padding-top:100px; }
-.left{ width: 50%; float: left; padding:0 20px}
+.left:first-child{ width:40%; }
+.left{ width: 60%; float: left; padding:0 20px}
 
 input, textarea{ width: 100%; border:1px solid #00adff; padding:15px; margin-bottom:20px;}
 input{ height:50px; }
 textarea{ height:100px; resize: none; }
 button{ border:1px solid #00adff; min-width:200px; padding:15px; height:50px; text-transform: uppercase; background-color:#00adff; color:#fff; letter-spacing: 1px; }
+.smallBtn{min-width:150px; padding: 10px; height:40px; }
+table{ width:100%; border:1px solid #ccc; margin-bottom:15px;}
+table tr{border-bottom:1px solid #ccc;}
+table td{ padding:15px; width:20%; }
+table td span{ display: block; padding-bottom:5px; font-style: italic; font-weight:100; }
